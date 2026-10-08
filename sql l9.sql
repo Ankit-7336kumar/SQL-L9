@@ -87,7 +87,21 @@ select round(143.78, -2), round(167.23,-2);  --  -2 place tk me 43 or 67 ko chan
 
 select round(143.78, -3), round(767.23,-3);  --  -3 place tk me 143 or 767 ko change krege  
 
-select round(143.78, -3), truncate(767.23,1);   
+select round(143.78, -3), truncate(767.23,1);  
+
+select now();
+
+select adddate( now(), -3); 
+
+select now (), adddate( now(), interval 1 week); 
+
+select now(), extract( year from now() );
+
+select datediff( current_date(), '2026-10-09'); -- 2 date le kr difference nikalna 
+
+select now(), date_format(now(), '%y %m' );
+
+
 
  
 
