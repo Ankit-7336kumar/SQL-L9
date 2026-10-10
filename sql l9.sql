@@ -99,7 +99,61 @@ select now(), extract( year from now() );
 
 select datediff( current_date(), '2026-10-09'); -- 2 date le kr difference nikalna 
 
-select now(), date_format(now(), '%y %m' );
+select now(), date_format(now(), '%y %m' );  
+
+-- multi row functions 
+
+use world; 
+
+select max(population) from city;
+
+select min(population) from city;
+
+select sum(population) from city;
+
+select count(population) from city;
+
+select avg(population) , sum(population)/count(population) from city; 
+
+select count(name) from city;  -- 4079
+
+select count(distinct name ) from city;  -- 3998 
+
+select count(name)from city where district='noord-holland';  
+
+-- group by ( ) function = similar values ko ek sath ek group bnata h 
+
+select  district from city group by district; 
+
+select  district,  count(name) from city group by district;  
+
+select continent from country;
+
+select count(distinct continent) from country;
+
+select continent, count(name) from country group by continent;
+
+select name , count(name) from country group by name ;  
+
+select continent, count(name) from country group by continent; 
+
+select continent, count(name) from country group by continent
+having count(name); 
+
+-- practice in sql zoo chapter 5 . 
+
+
+
+
+
+
+
+                                                                                                                                                
+
+
+
+
+
 
 
 
